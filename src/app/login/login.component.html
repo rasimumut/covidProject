@@ -1,0 +1,22 @@
+<div class="example-container container"   style="text-align: center; margin-top: 20%; ">
+  <div>
+    <mat-form-field appearance="fill" class="mr-5">
+      <mat-label>Kullanıcı Adı</mat-label>
+      <input matInput  #userName >
+    </mat-form-field>
+    <button class="btn btn-primary btn-lg" (click)="login(userName.value,password.value)">Giriş</button>
+  <mat-form-field appearance="fill" class="ml-5 mr-5">
+    <mat-label>Şifre</mat-label>
+    <input matInput #password  [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'Göster' : 'Gizle'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  </div>
+  <div>
+    <label>Rasim Umut ÖZKURT Covid-19 Data Project</label>
+  </div>
+
+
+</div>
+

@@ -1,0 +1,13 @@
+<div class="row m-2 "></div>
+<div style="display: block;" class=" card mat-elevation-z7 ">
+  <h4 class="pt-2 ml-2"> <b>Tarihsel Enfeksiyon Dağılımı</b></h4>
+  <canvas baseChart width="400" height="80"
+    [datasets]="lineChartData"
+    [labels]="lineChartLabels"
+    [options]="lineChartOptions"
+    [colors]="lineChartColors"
+    [legend]="lineChartLegend"
+    [chartType]="lineChartType"
+    [plugins]="lineChartPlugins">
+  </canvas>
+</div>

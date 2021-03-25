@@ -11,51 +11,8 @@
   <title>Hello, world!</title>
 
 </head>
-<body class="container-fluid">
-
-<div class="row">
-
-  <!-- Left Side Start -->
-  <div class="col-md-4 mt-2">
-
-
-    <div class="card">
-      <app-requests></app-requests>
-    </div>
-
-  </div>
-  <!-- Left Side End-->
-
-  <!-- Right Side Start -->
-  <div class="col-md-8 mt-2 p-2">
-   <app-infonav></app-infonav>
-    <div class="card mt-3 p-2">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda culpa eligendi, exercitationem iste libero nisi odio provident! A animi, cupiditate dolore ipsam, molestiae molestias neque non officia quis rerum, tempore.
-    </div>
-
-    <div class=" mt-3 p-2" >
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col md-11">
-
-        </div>
-        </div>
-
-
-    </div>
-  </div>
-  <!-- Right Side End -->
-
-
-</div>
-<div class="row fixed-bottom">
-  <div class="col-md-4">
-    <app-my-pie-chart></app-my-pie-chart>
-  </div>
-  <div class="col-md-8 ">
-    <app-my-line-chart></app-my-line-chart>
-  </div>
-</div>
+<body class="container-fluid bg-light" >
+<router-outlet></router-outlet>
 
 </body>
 </html>

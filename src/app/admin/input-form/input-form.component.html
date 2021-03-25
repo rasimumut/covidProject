@@ -1,0 +1,48 @@
+
+<div class="row m-3"></div>
+<div class="card mat-elevation-z8">
+  <div class="row mt-3"></div>
+  <div class="row ml-2">
+    <div class=" col-md-2 mt-3">
+      <h2 class="text-danger"><b>{{dataName}}</b></h2>
+    </div>
+
+  </div>
+  <div class="row ml-3">
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Tarih Seçin</mat-label>
+        <input matInput [matDatepicker]="picker" >
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+      <div class="ml-5">
+        <mat-form-field appearance="fill">
+          <mat-label>Vaka</mat-label>
+          <input type="number" matInput  #case >
+        </mat-form-field>
+      </div>
+
+      <div class="ml-5">
+        <mat-form-field appearance="fill">
+          <mat-label>Ölüm</mat-label>
+          <input type="number" matInput #death >
+        </mat-form-field>
+      </div>
+
+      <div class="ml-5">
+        <mat-form-field appearance="fill">
+          <mat-label>İyileşen</mat-label>
+          <input type="number" matInput #recover>
+        </mat-form-field>
+      </div>
+
+    <div class="ml-5">
+      <button class="btn btn-outline-primary mt-2" (click)="saveData(case.value,death.value,recover.value,picker.startAt,dataName,dataCode)" >Bilgileri Kaydet</button>
+    </div>
+  </div>
+  <app-detail-table></app-detail-table>
+
+</div>
+

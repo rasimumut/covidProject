@@ -1,0 +1,11 @@
+.example-container {
+  height: 595px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+th.mat-sort-header-sorted {
+  color: black;
+}

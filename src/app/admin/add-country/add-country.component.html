@@ -1,0 +1,21 @@
+<div class="row mat-elevation-z8 card mt-2">
+  <div class="row mt-4"></div>
+  <h3 class="ml-3"><b>Ülke Ekle</b></h3>
+    <div class="">
+      <mat-form-field appearance="fill" class="ml-3">
+        <mat-label>Ülke Adı</mat-label>
+        <input  matInput  #name >
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="ml-3">
+        <mat-label>Ülke Kodu</mat-label>
+        <input  matInput #code >
+      </mat-form-field>
+      <button class="btn btn-primary ml-3 mb-3" (click)="saveData(name.value,code.value)">Bilgileri Kaydet</button>
+    </div>
+  </div>
+
+
+
+
+

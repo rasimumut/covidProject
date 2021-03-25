@@ -1,0 +1,39 @@
+<div class="example-container mat-elevation-z8 ">
+  <div class="col-md-6 mt-1">
+    <mat-form-field>
+      <mat-label>Ülke Adı</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Ülke Adı" #input>
+    </mat-form-field>
+  </div>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> ÜLKE </th>
+      <td mat-cell *matCellDef="let data"> {{data.name}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="death">
+      <th mat-header-cell *matHeaderCellDef > ÖLÜM </th>
+      <td mat-cell *matCellDef="let data"> {{data.death}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="recover">
+      <th mat-header-cell *matHeaderCellDef> İYİLEŞEN </th>
+      <td mat-cell *matCellDef="let data"> {{data.recover}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="case">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> VAKA </th>
+      <td mat-cell *matCellDef="let data"> {{data.case}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let data; columns: displayedColumns;"></tr>
+
+
+  </table>
+</div>
